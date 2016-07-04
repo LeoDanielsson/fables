@@ -1,0 +1,18 @@
+{
+  "name": "fables",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack src/js/entry.js bundle.js"
+  },
+  "author": "Leo Danielsson",
+  "license": "ISC",
+  "dependencies": {
+    "materialize-css": "^0.97.6"
+  },
+  "devDependencies": {
+    "live-reload": "^1.1.0"
+  }
+}
