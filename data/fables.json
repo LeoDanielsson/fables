@@ -1,0 +1,34 @@
+{
+  "fables": [
+    {
+      "name": "Kamelen",
+      "imageUrl": "http://annikaheed.se/bilder/169.jpg",
+      "artist": "Annika Heed",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere tempor hendrerit. Donec id consectetur neque. Donec molestie nisl quis commodo maximus."
+    },
+    {
+      "name": "Katten",
+      "imageUrl": "http://annikaheed.se/bilder/127.jpg",
+      "artist": "Bosse Bengtsson",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere tempor hendrerit. Donec id consectetur neque. Donec molestie nisl quis commodo maximus."
+    },
+    {
+      "name": "Räven",
+      "imageUrl": "http://annikaheed.se/bilder/97.jpg",
+      "artist": "Anna Andersson",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere tempor hendrerit. Donec id consectetur neque. Donec molestie nisl quis commodo maximus."
+    },
+    {
+      "name": "Björnen",
+      "imageUrl": "http://annikaheed.se/bilder/154.jpg",
+      "artist": "Uffe Larsson",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere tempor hendrerit. Donec id consectetur neque. Donec molestie nisl quis commodo maximus."
+    },
+    {
+      "name": "Vargen",
+      "imageUrl": "http://annikaheed.se/bilder/147.jpg",
+      "artist": "Viveka Vitlök",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere tempor hendrerit. Donec id consectetur neque. Donec molestie nisl quis commodo maximus."
+    }
+  ]
+}
