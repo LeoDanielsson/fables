@@ -46,7 +46,7 @@
 
 	+ __webpack_require__(1);
 
-	document.write('det funkar!');
+	document.write('det funkar watched!!');
 
 
 /***/ },
@@ -84,7 +84,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n    background: green;\n}\n", ""]);
+	exports.push([module.id, "body {\n    background: blue;\n}\n", ""]);
 
 	// exports
 

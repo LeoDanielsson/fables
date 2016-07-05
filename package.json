@@ -5,14 +5,17 @@
   "main": "bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack src/js/entry.js bundle.js"
+    "build": "webpack --progress --colors",
+    "watch": "webpack-dev-server --progress --colors --open",
+    "livereload": "live-reload --port 9091 ."
   },
   "author": "Leo Danielsson",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "materialize-css": "^0.97.6"
   },
   "devDependencies": {
-    "live-reload": "^1.1.0"
+    "css-loader": "^0.23.1",
+    "style-loader": "^0.13.1"
   }
 }
