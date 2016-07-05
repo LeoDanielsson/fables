@@ -1,5 +1,6 @@
-import "../css/style.css";
+import '../../node_modules/materialize-css/dist/css/materialize.min.css';
+import cardView from './view/card.js';
 
-var func = name => `det funkar!! ${name}`;
+const appElement = document.getElementById('app');
 
-document.write(func('babel funkar'));
+cardView(appElement);

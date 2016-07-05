@@ -1,7 +1,10 @@
+var path = require('path');
+
 module.exports = {
     entry: './src/js/entry.js',
     output: {
-        path: __dirname,
+        path: path.join(__dirname, 'dist'),
+        publicPath: '/dist/',
         filename: 'fables.js'
     },
     module: {
@@ -17,6 +20,18 @@ module.exports = {
               query: {
                 presets: ['es2015']
               }
+          },
+          {
+            test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+            loader:'url?limit=10000&mimetype=application/font-woff'
+          },
+          {
+            test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+            loader: 'file'
+          },
+          {
+            test: /\.handlebars$/,
+            loader: "handlebars-loader"
           }
         ]
     },
