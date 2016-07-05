@@ -1,3 +1,5 @@
-+ require("../css/style.css");
+import "../css/style.css";
 
-document.write('det funkar watched!!');
+var func = name => `det funkar!! ${name}`;
+
+document.write(func('babel funkar'));
