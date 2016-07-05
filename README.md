@@ -1,12 +1,9 @@
 ## Usage
 
-`npm install`
+Install dependencies: `npm install`
 
-To build
-`npm run build`
+Build: `npm run build`
 
-To watch:
-`npm run watch`
+Watch: `npm run watch`
 
-To start dev server on localhost:8080
-`npm run start`
+Start dev server (localhost:8080) `npm run start`
