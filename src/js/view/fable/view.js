@@ -1,8 +1,8 @@
 import template from './template.handlebars';
-import { getFable } from '../../service/fableService.js';
+import { getFable } from '../../data/dao.js';
 
 function render(el, context) {
-    el.innerHTML = template(getFable(context.params.id));
+    getFable(context.params.id).then(fable => el.innerHTML = template(fable));
 }
 
 export default render;

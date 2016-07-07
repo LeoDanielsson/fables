@@ -1,9 +1,9 @@
 import template from './template.handlebars';
 import page from 'page';
-import { getFables } from '../../service/fableService.js';
+import { getFables } from '../../data/dao.js';
 
 function render(el) {
-    el.innerHTML = template(getFables());
+    getFables().then(fables => el.innerHTML = template(fables));
 
     Array.from(el.getElementsByClassName('js-listen')).forEach(bindEventListener);
 }
