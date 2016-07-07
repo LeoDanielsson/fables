@@ -3,14 +3,12 @@ import 'firebase/auth';
 import 'firebase/database';
 
 // Initialize Firebase
-var config = {
+firebase.initializeApp({
     apiKey: "AIzaSyBdW4FUGvj0ivGFzpY4jaIizW_59Lz_yR4",
     authDomain: "fables-edb5c.firebaseapp.com",
     databaseURL: "https://fables-edb5c.firebaseio.com",
     storageBucket: "",
-};
-
-firebase.initializeApp(config);
+});
 
 let cache;
 
