@@ -1,14 +1,12 @@
-var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: ['babel-polyfill', './src/js/entry.js'],
     output: {
-        path: path.join(__dirname, 'public'),
-        publicPath: '/public/',
+        path: 'public',
         filename: 'fables.js'
     },
-    plugins: [new HtmlWebpackPlugin()],
+    plugins: [new HtmlWebpackPlugin({title: 'Fabel'})],
     module: {
         loaders: [
             {
@@ -40,9 +38,6 @@ module.exports = {
     devtool: 'source-map',
     devServer: {
         port: 3003,
-        contentBase: './public',
-        historyApiFallback: {
-            index: '/public/'
-        }
+        contentBase: './public'
     }
 };

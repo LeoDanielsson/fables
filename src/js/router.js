@@ -9,7 +9,7 @@ function init(el) {
 
     page.redirect('/', '/overview');
 
-    page();
+    page({ hashbang: true });
 }
 
 export default init;
