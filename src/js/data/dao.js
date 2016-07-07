@@ -2,7 +2,6 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
 
-// Initialize Firebase
 firebase.initializeApp({
     apiKey: "AIzaSyBdW4FUGvj0ivGFzpY4jaIizW_59Lz_yR4",
     authDomain: "fables-edb5c.firebaseapp.com",

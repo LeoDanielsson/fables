@@ -1,9 +1,12 @@
 ## Usage
 
-Install dependencies: `npm install`
+#### Install dependencies
+* `npm install`
 
-Build: `npm run build`
+#### Build static assets
+* `npm run build`
+* Assets can be found under `/public`
 
-Watch: `npm run watch`
-
-Start dev server (localhost:8080) `npm run start`
+#### Run locally
+* `npm run start`
+* Open `http://localhost:3003` in browser
