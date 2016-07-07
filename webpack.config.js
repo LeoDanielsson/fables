@@ -1,7 +1,7 @@
 var path = require('path');
 
 module.exports = {
-    entry: './src/js/entry.js',
+    entry: ['babel-polyfill', './src/js/entry.js'],
     output: {
         path: path.join(__dirname, 'dist'),
         publicPath: '/dist/',
@@ -30,7 +30,7 @@ module.exports = {
             loader:'url?limit=10000&mimetype=application/font-woff'
           },
           {
-            test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+            test: /\.(ttf|eot|svg|mp3)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
             loader: 'file'
           },
           {

@@ -1,3 +1,12 @@
+.audio-player{
+    display: table;
+    margin: 0 auto;
+}
+
+.topbar {
+    margin-top: 10px;
+}
+
 body {
-    background: blue;
+    background-color: #546e7a;
 }

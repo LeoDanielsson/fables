@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col s12 topbar">
+        <a class="left blue-grey lighten-5 blue-grey-text darken-text-5 waves-effect waves-light btn" href="#!/overview">&lt;&lt; Tillbaka till översikten</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col s12">
+        <div class="card blue-grey lighten-5">
+            <div class="card-image">
+                <img src="{{imageUrl}}">
+                <span class="card-title">{{name}} av {{artist}}</span>
+            </div>
+            <div class="card-content">
+                <p>{{description}}</p>
+            </div>
+            <div class="card-action">
+                <div class="audio-player">
+                    <audio src="{{audioUrl}}" preload="auto" controls autoplay></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

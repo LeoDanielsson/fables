@@ -1,12 +1,14 @@
-import '../../node_modules/materialize-css/dist/css/materialize.min.css';
-import cardsView from './view/cards.js';
-import data from '../../data/fables.json';
-import layout from './layout.handlebars';
+import 'babel-polyfill';
 
-console.log('data:', data);
+import '../../node_modules/materialize-css/dist/css/materialize.min.css';
+import '../css/style.css';
+
+import layout from './layout.handlebars';
+import initRouter from './router.js';
 
 const appElement = document.getElementById('app');
 appElement.innerHTML = layout();
 
-const fablesElement = appElement.getElementsByClassName('js-fables')[0];
-cardsView(fablesElement, data);
+const contentElement = document.getElementById('content');
+
+initRouter(contentElement);
