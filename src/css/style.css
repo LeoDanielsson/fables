@@ -1,6 +1,5 @@
-.audio-player{
-    display: table;
-    margin: 0 auto;
+.audio-player audio {
+    width: 100%;
 }
 
 .topbar {
