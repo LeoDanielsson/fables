@@ -7,6 +7,7 @@ function init(el) {
     page('/overview', context => overviewView(el, context));
     page('/fable/:id', context => fableView(el, context));
 
+    page.base(window.location.pathname);
     page.redirect('/', '/overview');
 
     page({ hashbang: true });
