@@ -24,7 +24,7 @@ function getFables() {
 }
 
 function getFable(id) {
-    return getFables().then(fables => fables.find(fable => fable.id === id));
+    return getFables().then(fables => fables[id]);
 }
 
 export { getFables, getFable };
