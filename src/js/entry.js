@@ -1,6 +1,9 @@
 import 'babel-polyfill';
 
-import '../../node_modules/materialize-css/dist/css/materialize.min.css';
+import '../../node_modules/material-design-lite/material.min.css';
+import '../../node_modules/material-design-lite/material.min.js';
+import '../../lib/material-icons.css';
+
 import '../css/style.css';
 
 import layout from './layout.handlebars';

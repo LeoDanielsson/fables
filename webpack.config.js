@@ -22,12 +22,8 @@ module.exports = {
                 }
             },
             {
-                test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                loader: 'url?limit=10000&mimetype=application/font-woff'
-            },
-            {
-                test: /\.(ttf|eot|svg|mp3)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                loader: 'file'
+                test: /\.(jpe?g|png|gif|svg|eot|woff|ttf|svg|woff2)$/,
+                loader: "file?name=[name].[ext]"
             },
             {
                 test: /\.handlebars$/,
