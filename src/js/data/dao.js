@@ -9,7 +9,7 @@ firebase.initializeApp({
     storageBucket: "",
 });
 
-let cache = {
+let cache; /*{
   "-KM9odspCvurySVPYBp_" : {
     "artist" : "Annika Heed",
     "audioUrl" : "https://firebasestorage.googleapis.com/v0/b/fables-edb5c.appspot.com/o/p4_barnradion_20160113_1900_2feb57b.mp3?alt=media&token=cefc5a3c-1ceb-49e9-9247-a6bc46dbcc36",
@@ -38,7 +38,7 @@ let cache = {
     "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/fables-edb5c.appspot.com/o/145.jpg?alt=media&token=33dba9ed-e0ea-4751-8123-62c75998cfb3",
     "name" : "Haren"
   }
-};
+};*/
 
 function getFables() {
     if(cache) {
@@ -56,4 +56,8 @@ function getFable(id) {
     return getFables().then(fables => fables[id]);
 }
 
-export { getFables, getFable };
+function getLanguages() {
+    return Promise.resolve({'sv': 'Svenska', 'ar':'العربية'});
+}
+
+export { getFables, getFable, getLanguages };
