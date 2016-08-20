@@ -1,6 +1,6 @@
 <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--12-col topbar">
-        <button class="js-back-button mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+        <button class="js-back-button back-button mdl-button mdl-js-button mdl-js-ripple-effect">
             &lt;&lt; Tillbaka till översikten
         </a>
     </div>
@@ -8,8 +8,14 @@
 <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--12-col mdl-shadow--2dp fable-description">
         <h1>{{name}}</h1>
-        <h4><em>{{artist}}</em></h4>
-        <p>{{description}}</p>
+        <h1>
+            {{artist.name}}
+            <a href="" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#artist-description">
+                <i class="artist-info material-icons">info</i>
+            </a>
+        </h1>
+
+        <h4>Material: {{material}}</h4>
     </div>
 </div>
 <div class="mdl-grid">

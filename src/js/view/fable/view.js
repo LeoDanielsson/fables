@@ -2,6 +2,8 @@ import template from './template.handlebars';
 import { getFable } from '../../data/dao.js';
 import page from 'page';
 import listenView from './listen/view.js';
+import artistDescriptionView from './artistDescription/view.js';
+
 
 function render(el, context) {
     getFable(context.params.id)
@@ -9,6 +11,7 @@ function render(el, context) {
             el.innerHTML = template(fable);
             bindEventListeners(el);
             renderListenView(el, fable);
+            artistDescriptionView('artist-description', fable.artist);
         });
 }
 
