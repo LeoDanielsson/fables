@@ -16,15 +16,18 @@ function getFables() {
         return Promise.resolve(cache.fables);
     }
 
-    return firebase.database().ref('/fables').once('value').then(snapshot => {
-        const fables = snapshot.val();
+    return firebase.database().ref('/fables').orderByChild('prio').once('value').then(snapshot => {
+        const fables = [];
+        snapshot.forEach(child => {
+            fables.push(Object.assign({id: child.key}, child.val()));
+        });
         cache.fables = fables;
         return fables;
     });
 }
 
 function getFable(id) {
-    return getFables().then(fables => fables[id]);
+    return getFables().then(fables => fables.find(fable => fable.id === id));
 }
 
 function getLanguages() {
