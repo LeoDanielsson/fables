@@ -8,8 +8,10 @@
 }
 
 button.language-button {
-    font-size: 16px;
+    font-size: 20px;
     margin-right: 15px;
+    height: 50px;
+    padding: 0 25px;
 }
 
 .artist-info {
