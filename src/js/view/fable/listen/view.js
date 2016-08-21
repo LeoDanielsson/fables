@@ -2,11 +2,12 @@ import page from 'page';
 import { getLanguages } from '../../../data/dao.js';
 import selectLanguageTemplate from './selectLanguage.handlebars';
 import audioTemplate from './audio.handlebars';
+import _ from 'lodash';
 
 function render(el, fable) {
     getLanguages()
         .then(languages => {
-            el.innerHTML = selectLanguageTemplate(languages);
+            el.innerHTML = selectLanguageTemplate(_.pick(languages, Object.keys(fable.audio)));
             bindEventListeners(el, languages, fable);
         });
 }
