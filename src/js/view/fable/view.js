@@ -7,7 +7,6 @@ import artistDescriptionView from './artistDescription/view.js';
 
 
 function render(el, context) {
-    loaderView(el);
     getFable(context.params.id)
         .then(fable => {
             el.innerHTML = template(fable);
@@ -19,6 +18,7 @@ function render(el, context) {
 
 function bindEventListeners(el) {
     el.getElementsByClassName('js-back-button')[0].addEventListener('click', () => {
+        loaderView(el);
         page('/overview');
     });
 }
