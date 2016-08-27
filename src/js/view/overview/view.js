@@ -1,8 +1,10 @@
 import template from './template.handlebars';
+import loaderView from '../loader/view.js';
 import { getFables } from '../../data/dao.js';
 import page from 'page';
 
 function render(el) {
+    loaderView(el);
     getFables()
         .then(fables => el.innerHTML = template(fables))
         .then(() => bindClickListeners(el));
