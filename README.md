@@ -9,4 +9,4 @@
 
 #### Run locally
 * `npm run start`
-* Open `http://localhost:3003` in browser
+* Open `http://localhost:3003/index.html` in browser
