@@ -13,7 +13,7 @@ function render(el, context) {
             el.innerHTML = template(fable);
             bindEventListeners(el);
             renderListenView(el, fable);
-            artistDescriptionView('artist-description');
+            artistDescriptionView('artist-description', fable.artist);
         });
 }
 
