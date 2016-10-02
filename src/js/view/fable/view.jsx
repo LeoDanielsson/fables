@@ -1,9 +1,11 @@
 import template from './template.handlebars';
 import { getFable } from '../../data/dao.js';
 import page from 'page';
-import listenView from './listen/view.js';
-import loaderView from '../loader/view.js';
+import listenView from './listen/view.jsx';
+import Loader from '../../components/Loader.jsx';
 import artistDescriptionView from './artistDescription/view.js';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 
 function render(el, context) {
@@ -18,7 +20,7 @@ function render(el, context) {
 
 function bindEventListeners(el) {
     el.getElementsByClassName('js-back-button')[0].addEventListener('click', () => {
-        loaderView(el);
+        ReactDOM.render(<Loader/>, el);
         page('/overview');
     });
 }

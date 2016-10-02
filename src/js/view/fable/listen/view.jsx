@@ -1,7 +1,10 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 import page from 'page';
 import { getLanguages } from '../../../data/dao.js';
 import selectLanguageTemplate from './selectLanguage.handlebars';
-import audioTemplate from './audio.handlebars';
+import Audio from '../../../components/Audio.jsx';
 import _ from 'lodash';
 
 function render(el, fable) {
@@ -20,7 +23,7 @@ function bindEventListeners(el, languages, fable) {
 }
 
 function renderAudioView(el, audioUrl) {
-    el.getElementsByClassName('audio-player')[0].innerHTML = audioTemplate(audioUrl);
+    ReactDOM.render(<Audio url={ audioUrl }/>, el.getElementsByClassName('audio-player')[0]);
     el.getElementsByTagName('audio')[0].addEventListener('ended', () => page('/overview'));
 }
 

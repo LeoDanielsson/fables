@@ -1,7 +1,7 @@
 import page from 'page';
 
-import overviewView from './view/overview/view.js';
-import fableView from './view/fable/view.js';
+import overviewView from './view/overview/view.jsx';
+import fableView from './view/fable/view.jsx';
 
 function init(el) {
     page('/overview', context => overviewView(el, context));
