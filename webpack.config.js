@@ -1,4 +1,5 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const htmlWebpackTemplate = require('html-webpack-template');
 
 module.exports = {
     entry: ['./src/js/entry.jsx'],
@@ -8,8 +9,8 @@ module.exports = {
     },
     plugins: [new HtmlWebpackPlugin({
       title: 'Fabel',
-      template: require('html-webpack-template'),
-      appMountId:"container"
+      template: htmlWebpackTemplate,
+      appMountId: 'container'
     })],
     module: {
         loaders: [
@@ -19,19 +20,19 @@ module.exports = {
             },
             {
                 test: /\.(jpe?g|png|gif|svg|eot|woff|ttf|svg|woff2)$/,
-                loader: "file?name=[name].[ext]"
+                loader: 'file?name=[name].[ext]'
             },
             {
                 test: /\.handlebars$/,
-                loader: "handlebars-loader"
+                loader: 'handlebars-loader'
             },
             {
               test: /.jsx?$/,
               loader: 'babel-loader',
               exclude: /node_modules/,
-              query: {
-                presets: ['es2015', 'react'],
-                plugins: ["transform-object-rest-spread"]
+                query: {
+                  presets: ['es2015', 'react'],
+                  plugins: ['transform-object-rest-spread']
               }
             }
         ]
@@ -39,6 +40,7 @@ module.exports = {
     devtool: 'source-map',
     devServer: {
         port: 3003,
-        contentBase: './public'
+        contentBase: './public',
+        historyApiFallback: true,
     }
 };
