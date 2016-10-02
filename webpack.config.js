@@ -5,12 +5,14 @@ module.exports = {
     entry: ['./src/js/entry.jsx'],
     output: {
         path: 'public',
-        filename: 'fables.js'
+        filename: 'fables.js',
+        publicPath: '/'
     },
     plugins: [new HtmlWebpackPlugin({
       title: 'Fabel',
       template: htmlWebpackTemplate,
-      appMountId: 'container'
+      appMountId: 'container',
+      baseHref: '/'
     })],
     module: {
         loaders: [
@@ -41,6 +43,6 @@ module.exports = {
     devServer: {
         port: 3003,
         contentBase: './public',
-        historyApiFallback: true,
+        historyApiFallback: true
     }
 };

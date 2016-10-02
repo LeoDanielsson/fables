@@ -1,16 +1,19 @@
-import page from 'page';
+import { Router, Route, browserHistory } from 'react-router';
+import { Provider } from 'react-redux';
+import React from 'react';
+import store from './store.js'
+import App from './components/App.jsx'
+import Fable from './components/Fable.jsx';
 
-import overviewView from './view/overview/view.jsx';
-import fableView from './view/fable/view.jsx';
-
-function init(el) {
-    page('/overview', context => overviewView(el, context));
-    page('/fable/:id', context => fableView(el, context));
-
-    page.base(window.location.pathname);
-    page.redirect('/', '/overview');
-
-    page({ hashbang: true });
+function Root() {
+  return (
+    <Provider store={store}>
+      <Router history={browserHistory}>
+        <Route path='/' component={App} />
+        <Route path='/fable/(:fableId)' component={Fable} />
+      </Router>
+    </Provider>
+ )
 }
 
-export default init;
+export default Root;
