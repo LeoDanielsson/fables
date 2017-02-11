@@ -1,4 +1,4 @@
-import { getFables } from '../data/dao.js';
+import { getFables, getLanguages } from '../data/dao.js';
 
 function recieveFables(fables) {
   return {
@@ -20,4 +20,28 @@ function fetchFables() {
   }
 }
 
-export { requestFables, fetchFables, recieveFables }
+function recieveLanguages(languages) {
+  return {
+    type: 'RECIEVE_LANGUAGES',
+    languages,
+  }
+}
+
+function requestLanguages() {
+  return { type: 'REQUEST_LANGUAGES'};
+}
+
+function fetchLanguages() {
+  return dispatch => {
+    dispatch(requestLanguages());
+    return getLanguages().then(languagesData => {
+      dispatch(recieveLanguages(languagesData))
+    });
+  }
+}
+
+function selectLanguage(languageId) {
+  return { type: 'SELECT_LANGUAGE', languageId };
+}
+
+export { requestFables, fetchFables, recieveFables, requestLanguages, fetchLanguages, recieveLanguages, selectLanguage }

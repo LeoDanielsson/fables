@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Grid({children}) {
-  return <div className="mdl-cell mdl-cell--4-col">{children}</div>
+function Grid({cols, className, children}) {
+  return <div className={`mdl-cell mdl-cell--${cols ? cols : 6}-col ${className}`}>{children}</div>
 }
 
 export default Grid;

@@ -1,5 +1,4 @@
 function fables(state = {}, action) {
-  console.log(state);
   switch(action.type) {
     case 'REQUEST_FABLES':
       return {

@@ -17,7 +17,9 @@ function getContent(isFetching, fables) {
 }
 
 function Overview({isFetching, fables}) {
-  return <Grid>{getContent(isFetching, fables)}</Grid>
+  return <Grid>
+    {getContent(isFetching, fables)}
+  </Grid>
 }
 
 function mapStateToProps(state) {
