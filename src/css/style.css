@@ -1,7 +1,7 @@
 .overview {
   display: flex;
   flex-wrap: wrap;
-  margin: 5px;
+  margin: 5px auto;
 }
 
 .fable-view {
@@ -14,11 +14,12 @@
 
 .overview-card {
   cursor: pointer;
-  cursor: pointer;
   flex-basis: 40%;
   flex-grow: 1;
   margin: 3px;
+  min-height: 50vw;
 }
+
 
 button.back-button {
     color: #c6cdd0;
@@ -82,4 +83,8 @@ body {
 .artist-description {
     font-size: 20px;
     color: rgba(0, 0, 0, 0.75);
+}
+
+.header {
+
 }
