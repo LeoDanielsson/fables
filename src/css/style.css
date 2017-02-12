@@ -1,7 +1,7 @@
 .overview {
   display: flex;
   flex-wrap: wrap;
-  margin: 5px auto;
+  margin: 5px;
 }
 
 .fable-view {
@@ -16,10 +16,17 @@
   cursor: pointer;
   flex-basis: 40%;
   flex-grow: 1;
-  margin: 3px;
-  min-height: 50vw;
+  margin: 5px;
+  min-height: 45vw;
 }
 
+@media (min-width: 800px) {
+    .overview-card {
+      flex-basis: 25%;
+      min-height: 33vw;
+      max-width: calc(33% - 5px);
+    }
+}
 
 button.back-button {
     color: #c6cdd0;

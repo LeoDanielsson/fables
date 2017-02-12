@@ -21,10 +21,10 @@ function Fable({isFetching, fable}) {
             </button>
         </div>
         <div className="mdl-shadow--2dp fable-description">
-            <h2>{fable.name}</h2>
-            <h2>
+            <h3>{fable.name}</h3>
+            <h3>
                 {fable.artist.name}
-            </h2>
+            </h3>
             <h4>Material: {fable.material}</h4>
         </div>
         {fable.audio &&
