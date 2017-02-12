@@ -10,16 +10,14 @@ function getContent(isFetching, fables) {
     return <Loader/>
   }
   return fables.map(fable =>
-    <Cell key={fable.id}>
-      <FableCard fable={fable}/>
-    </Cell>
+    <FableCard key={fable.id} fable={fable}/>
   );
 }
 
 function Overview({isFetching, fables}) {
-  return <Grid>
+  return <div className="overview">
     {getContent(isFetching, fables)}
-  </Grid>
+  </div>
 }
 
 function mapStateToProps(state) {

@@ -8,34 +8,28 @@ import Listen from './Listen.jsx';
 
 function Fable({isFetching, fable}) {
     if(isFetching || !fable) {
-        return <Loader/>;
+        return <div className="fable-view"><Loader/></div>;
     }
     return (
-      <div>
-          <Grid>
-              <Cell cols="12" className="topbar">
-                  <button
-                      onClick={() => browserHistory.push('/')}
-                      className="back-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
-                  >
-                      &lt;&lt; Tillbaka till översikten
-                  </button>
-              </Cell>
-          </Grid>
-          <Grid>
-              <Cell cols="12" className="mdl-shadow--2dp fable-description">
-                  <h1>{fable.name}</h1>
-                  <h1>
-                      {fable.artist.name}
-                  </h1>
-                  <h4>Material: {fable.material}</h4>
-              </Cell>
-          </Grid>
-          <Grid>
-            <Cell cols="12" className="mdl-shadow--2dp fable-description">
-              <Listen audio={fable.audio}/>
-            </Cell>
-          </Grid>
+      <div className="fable-view">
+        <div className="topbar">
+            <button
+                onClick={() => browserHistory.push('/')}
+                className="back-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+            >
+                &lt;&lt; Tillbaka till översikten
+            </button>
+        </div>
+        <div className="mdl-shadow--2dp fable-description">
+            <h2>{fable.name}</h2>
+            <h2>
+                {fable.artist.name}
+            </h2>
+            <h4>Material: {fable.material}</h4>
+        </div>
+        <div className="mdl-shadow--2dp fable-description">
+          <Listen audio={fable.audio}/>
+        </div>
       </div>
     );
 }

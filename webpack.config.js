@@ -12,7 +12,8 @@ module.exports = {
       title: 'Fabel',
       template: htmlWebpackTemplate,
       appMountId: 'container',
-      baseHref: '/'
+      baseHref: '/',
+      mobile: true
     })],
     module: {
         loaders: [

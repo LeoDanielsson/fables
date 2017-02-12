@@ -1,6 +1,6 @@
-import { combineReducers } from 'redux'
+;import { combineReducers } from 'redux'
 import fables from './fables';
-import languages from './languages'
+import languages from './languages';
 
 const rootReducer = combineReducers({ fables, languages });
 
