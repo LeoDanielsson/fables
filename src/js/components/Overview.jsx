@@ -9,9 +9,10 @@ function getContent(isFetching, fables) {
   if(isFetching) {
     return <Loader/>
   }
-  return fables.map(fable =>
-    <FableCard key={fable.id} fable={fable}/>
-  );
+  return fables
+    .filter(fable => !fable.disabled)
+    .sort((a, b) => a.prio - b.prio)
+    .map(fable => <FableCard key={fable.id} fable={fable}/>);
 }
 
 function Overview({isFetching, fables}) {

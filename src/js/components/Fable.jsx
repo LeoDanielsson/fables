@@ -27,9 +27,11 @@ function Fable({isFetching, fable}) {
             </h2>
             <h4>Material: {fable.material}</h4>
         </div>
-        <div className="mdl-shadow--2dp fable-description">
-          <Listen audio={fable.audio}/>
-        </div>
+        {fable.audio &&
+          <div className="mdl-shadow--2dp fable-description">
+            <Listen audio={fable.audio}/>
+          </div>
+        }
       </div>
     );
 }
