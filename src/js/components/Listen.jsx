@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactAudioPlayer from 'react-audio-player';
 import { connect } from 'react-redux';
 import { selectLanguage } from '../actions';
+import AudioPlayer from './AudioPlayer.jsx';
 
 function Listen({ audio, languages, selectedLanguage, selectLanguage }) {
   if(!audio || !languages) {
@@ -20,14 +20,7 @@ function Listen({ audio, languages, selectedLanguage, selectLanguage }) {
       )
     }
     { selectedLanguage &&
-      <div>
-        <audio
-          className="audio-player"
-          src={audio[selectedLanguage]}
-          autoPlay
-          controls
-        />
-      </div>
+        <AudioPlayer src={audio[selectedLanguage]}/>
     }
   </div>);
 }

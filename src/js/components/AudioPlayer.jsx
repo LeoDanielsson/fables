@@ -1,23 +1,23 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 class AudioPlayer extends React.Component {
-  constructor() {
-    this.state = { playing: false };
+  play() {
+    const audio = ReactDOM.findDOMNode(this);
+    audio.play();
+  }
+  componentDidMount() {
+    this.play();
+  }
+  componentDidUpdate() {
+     this.play();
   }
   render() {
-    <div>
-      <audio
-        className="audio-player mdl-button"
+      return <audio
+        className="audio-player"
         src={this.props.src}
-        autoPlay
+        controls
       />
-      <button className="play-button mdl-button mdl-button--raised" on>
-        <svg fill="#000000" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8 5v14l11-7z"/>
-          <path d="M0 0h24v24H0z" fill="none"/>
-        </svg>
-      </button>
-    </div>
   }
 }
 
