@@ -1,12 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
+import { openModal } from '../actions';
 import Loader from './Loader.jsx';
-import Grid from './Grid.jsx';
-import Cell from './Cell.jsx';
 import Listen from './Listen.jsx';
 
-function Fable({isFetching, fable}) {
+function Fable({ isFetching, fable, openModal }) {
     if(isFetching || !fable) {
         return <div className="fable-view"><Loader/></div>;
     }
@@ -22,16 +21,18 @@ function Fable({isFetching, fable}) {
         </div>
         <div className="mdl-shadow--2dp fable-description">
             <h3>{fable.name}</h3>
-            <h3>
-                {fable.artist.name}
-            </h3>
-            <h4>Material: {fable.material}</h4>
+            <h4>{fable.artist.name}</h4>
+            <p>Material: {fable.material}</p>
         </div>
         {fable.audio &&
           <div className="mdl-shadow--2dp fable-description">
             <Listen audio={fable.audio}/>
           </div>
         }
+        <div className="mdl-shadow--2dp fable-description">
+            <h4>Om konstnären</h4>
+            <p>{fable.artist.description}</p>
+        </div>
       </div>
     );
 }
@@ -46,4 +47,4 @@ function mapStateToProps(state, ownProps) {
   return { isFetching: state.fables.isFetching, fable: findFable(state.fables, ownProps) };
 }
 
-export default connect(mapStateToProps)(Fable);
+export default connect(mapStateToProps, { openModal })(Fable);

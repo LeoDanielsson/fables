@@ -3,7 +3,7 @@ import ReactAudioPlayer from 'react-audio-player';
 import { connect } from 'react-redux';
 import { selectLanguage } from '../actions';
 
-function Listen({ audio, languages, selectedLanguage, onSelectLanguage }) {
+function Listen({ audio, languages, selectedLanguage, selectLanguage }) {
   if(!audio || !languages) {
     return null;
   }
@@ -14,7 +14,7 @@ function Listen({ audio, languages, selectedLanguage, onSelectLanguage }) {
         <button
           key={languageId}
           className={`mdl-button mdl-button--raised language-button ${languageId === selectedLanguage ? 'mdl-button--colored' : ''}`}
-          onClick={() => onSelectLanguage(languageId)}>
+          onClick={() => selectLanguage(languageId)}>
             {languages[languageId]}
         </button>
       )
@@ -39,12 +39,4 @@ function mapStateToProps(state) {
   };
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    onSelectLanguage: languageId => {
-      dispatch(selectLanguage(languageId));
-    }
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Listen);
+export default connect(mapStateToProps, {selectLanguage})(Listen);

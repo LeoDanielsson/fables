@@ -2,8 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux'
 import Loader from './Loader.jsx';
 import FableCard from './FableCard.jsx'
-import Grid from './Grid.jsx';
-import Cell from './Cell.jsx';
 
 function getContent(isFetching, fables) {
   if(isFetching) {
@@ -17,7 +15,12 @@ function getContent(isFetching, fables) {
 
 function Overview({isFetching, fables}) {
   return <div className="overview">
-    {getContent(isFetching, fables)}
+    <div className="header">
+      <h5>Välj en skulptur för att lyssna på dess fabel</h5>
+    </div>
+    <div className="card-list">
+      {getContent(isFetching, fables)}
+    </div>
   </div>
 }
 

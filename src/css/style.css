@@ -1,11 +1,15 @@
 .overview {
+
+}
+
+.card-list {
   display: flex;
   flex-wrap: wrap;
   margin: 5px;
 }
 
 .fable-view {
-  margin: 8px;
+  margin: 10px;
 }
 
 .listen {
@@ -28,6 +32,10 @@
     }
 }
 
+p {
+    font-size: 16px;
+}
+
 button.back-button {
     color: #c6cdd0;
     font-size: 18px;
@@ -36,7 +44,7 @@ button.back-button {
 }
 
 button.language-button {
-    font-size: 18px;
+    font-size: 24px;
     margin-right: 15px;
     height: 100%;
     padding: 12px;
@@ -87,11 +95,28 @@ body {
     margin-bottom: 10px;
 }
 
+.header {
+  background-color: #cfd8dc;
+  color: #546e7a;
+  padding: 5px 25px;
+  text-align: center;
+}
+
 .artist-description {
     font-size: 20px;
     color: rgba(0, 0, 0, 0.75);
 }
 
-.header {
-
+.info-modal {
+    position: absolute;
+    z-index: 10;
+    background-color: #ECEFF1;
+    padding: 37px;
+    width: 59%;
+    left: 10%;
+    top: 19%;
+    height: 37%;
+    box-shadow: 3px 7px 11px grey;
+    font-size: 18px;
+    line-height: 24px;
 }
