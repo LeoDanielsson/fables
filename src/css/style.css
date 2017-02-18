@@ -116,17 +116,3 @@ body {
     font-size: 20px;
     color: rgba(0, 0, 0, 0.75);
 }
-
-.info-modal {
-    position: absolute;
-    z-index: 10;
-    background-color: #ECEFF1;
-    padding: 37px;
-    width: 59%;
-    left: 10%;
-    top: 19%;
-    height: 37%;
-    box-shadow: 3px 7px 11px grey;
-    font-size: 18px;
-    line-height: 24px;
-}
