@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
 import Loader from './Loader.jsx';
 import Listen from './Listen.jsx';
+import Footer from './Footer.jsx';
 
 function Fable({ isFetching, fable }) {
     if(isFetching || !fable) {
@@ -32,6 +33,7 @@ function Fable({ isFetching, fable }) {
             <h4>Om konstnären</h4>
             <p>{fable.artist.description}</p>
         </div>
+        <Footer />
       </div>
     );
 }

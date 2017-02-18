@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import Loader from './Loader.jsx';
-import FableCard from './FableCard.jsx'
+import FableCard from './FableCard.jsx';
+import Footer from './Footer.jsx';
 
 function getContent(isFetching, fables) {
   if(isFetching) {
@@ -21,6 +22,7 @@ function Overview({isFetching, fables}) {
     <div className="card-list">
       {getContent(isFetching, fables)}
     </div>
+    <Footer />
   </div>
 }
 

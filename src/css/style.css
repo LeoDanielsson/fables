@@ -42,10 +42,6 @@
     }
 }
 
-p {
-    font-size: 16px;
-}
-
 button.back-button {
     color: #c6cdd0;
     font-size: 18px;
@@ -105,6 +101,10 @@ body {
     margin-bottom: 10px;
 }
 
+.fable-description p {
+    font-size: 16px
+}
+
 .header {
   background-color: #cfd8dc;
   color: #546e7a;
@@ -115,4 +115,26 @@ body {
 .artist-description {
     font-size: 20px;
     color: rgba(0, 0, 0, 0.75);
+}
+
+.footer {
+    padding: 25px;
+    text-align: center;
+}
+
+.footer::before {
+    content: '';
+    border-top: 1px solid #c6cdd0;
+    display: block;
+    width: 15%;
+    margin: 26px auto;
+}
+
+.footer p {
+    margin-bottom: 3px;
+    color: #c6cdd0;
+}
+
+.footer a {
+    color: #ECEFF1;
 }
