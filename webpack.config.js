@@ -4,7 +4,7 @@ const htmlWebpackTemplate = require('html-webpack-template');
 module.exports = {
     entry: ['./src/js/entry.jsx'],
     output: {
-        path: 'public',
+        path: './public',
         filename: 'fables.js',
         publicPath: '/'
     },
@@ -19,7 +19,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.css$/,
-                loader: 'style!css'
+                loader: 'style-loader!css-loader'
             },
             {
               test: /.jsx?$/,
