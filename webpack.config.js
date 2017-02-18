@@ -22,14 +22,6 @@ module.exports = {
                 loader: 'style!css'
             },
             {
-                test: /\.(jpe?g|png|gif|svg|eot|woff|ttf|svg|woff2)$/,
-                loader: 'file?name=[name].[ext]'
-            },
-            {
-                test: /\.handlebars$/,
-                loader: 'handlebars-loader'
-            },
-            {
               test: /.jsx?$/,
               loader: 'babel-loader',
               exclude: /node_modules/,
