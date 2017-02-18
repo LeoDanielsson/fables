@@ -1,12 +1,13 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const htmlWebpackTemplate = require('html-webpack-template');
+const path = require('path');
 
 module.exports = {
     entry: ['./src/js/entry.jsx'],
     output: {
-        path: './public',
+        path: path.join(__dirname, '/public'),
         filename: 'fables.js',
-        publicPath: '/'
+        publicPath: ''
     },
     plugins: [new HtmlWebpackPlugin({
       title: 'Fabel',
