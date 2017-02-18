@@ -44,14 +44,6 @@ function selectLanguage(languageId) {
   return { type: 'SELECT_LANGUAGE', languageId };
 }
 
-function openModal(text) {
-  return { type: 'OPEN_MODAL', text };
-}
-
-function closeModal() {
-  return { type: 'CLOSE_MODAL' };
-}
-
 export {
   requestFables,
   fetchFables,
@@ -60,6 +52,4 @@ export {
   fetchLanguages,
   recieveLanguages,
   selectLanguage,
-  openModal,
-  closeModal
 }
