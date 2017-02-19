@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import Loader from './Loader.jsx';
-import FableCard from './FableCard.jsx';
-import Footer from './Footer.jsx';
+import Loader from './Loader';
+import FableCard from './FableCard';
+import Footer from './Footer';
 
 function getContent(isFetching, fables) {
   if(isFetching) {

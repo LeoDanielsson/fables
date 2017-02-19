@@ -2,8 +2,13 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var htmlWebpackTemplate = require('html-webpack-template');
 var path = require('path');
 
-module.exports = {
-    entry: ['./src/js/entry.jsx'],
+function buildConfig(env) {
+  var analytics = (env === 'prod') && {
+    trackingId: 'UA-92249813-1',
+    pageViewOnLoad: true
+  };
+  return {
+    entry: ['./src/js/Entry.jsx'],
     output: {
         path: path.join(__dirname, '/public'),
         filename: 'fables.js',
@@ -15,11 +20,11 @@ module.exports = {
       appMountId: 'container',
       baseHref: '/',
       mobile: true,
-      googleAnalytics: {
-        trackingId: 'UA-92249813-1',
-        pageViewOnLoad: true
-      }
+      googleAnalytics: analytics
     })],
+    resolve: {
+      extensions: ['.js', '.jsx']
+    },
     module: {
         loaders: [
             {
@@ -43,4 +48,7 @@ module.exports = {
         contentBase: './public',
         historyApiFallback: true
     }
+  };
 };
+
+module.exports = buildConfig;

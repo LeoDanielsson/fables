@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { selectLanguage } from '../actions';
-import AudioPlayer from './AudioPlayer.jsx';
+import AudioPlayer from './AudioPlayer';
 
 function Listen({ audio, languages, selectedLanguage, selectLanguage }) {
   if(!audio || !languages) {

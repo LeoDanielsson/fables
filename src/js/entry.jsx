@@ -3,9 +3,9 @@ import '../../node_modules/material-design-lite/material.js';
 import '../css/style.css';
 import React from 'react';
 import { render } from 'react-dom';
-import Root from './router';
+import Router from './Router';
 
 render(
-  <Root/>,
+  <Router/>,
   document.getElementById('container')
 );

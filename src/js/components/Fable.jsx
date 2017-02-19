@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
-import Loader from './Loader.jsx';
-import Listen from './Listen.jsx';
-import Footer from './Footer.jsx';
+import Loader from './Loader';
+import Listen from './Listen';
+import Footer from './Footer';
 
 function Fable({ isFetching, fable }) {
     if(isFetching || !fable) {
