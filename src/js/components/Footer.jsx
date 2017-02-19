@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import FullscreenButton from './FullscreenButton.jsx';
 
 function Footer({ hidden }) {
     return hidden ? null : (
@@ -7,6 +8,7 @@ function Footer({ hidden }) {
             <p>En utställning av <a href="http://www.renqvistsverkstad.se">Renqvists Verkstad</a></p>
             <p>App utvecklad av Leo Danielsson</p>
             <p><a href="https://github.com/LugoMoll/fables">Öppen källkod på GitHub</a></p>
+            <FullscreenButton />
         </div>
     );
 }
