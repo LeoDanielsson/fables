@@ -14,7 +14,11 @@ module.exports = {
       template: htmlWebpackTemplate,
       appMountId: 'container',
       baseHref: '/',
-      mobile: true
+      mobile: true,
+      googleAnalytics: {
+        trackingId: 'UA-92249813-1',
+        pageViewOnLoad: true
+      }
     })],
     module: {
         loaders: [
