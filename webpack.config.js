@@ -1,6 +1,6 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const htmlWebpackTemplate = require('html-webpack-template');
-const path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var htmlWebpackTemplate = require('html-webpack-template');
+var path = require('path');
 
 module.exports = {
     entry: ['./src/js/entry.jsx'],
