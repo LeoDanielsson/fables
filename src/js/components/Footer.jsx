@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import FullscreenButton from './FullscreenButton.jsx';
+import FullscreenButton from './FullscreenButton';
 
 function Footer({ hidden }) {
     return hidden ? null : (
