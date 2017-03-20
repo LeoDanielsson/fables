@@ -8,7 +8,7 @@ function buildConfig(env) {
     pageViewOnLoad: true
   };
   return {
-    entry: ['./src/js/Entry.jsx'],
+    entry: ['./src/js/entry.jsx'],
     output: {
         path: path.join(__dirname, '/public'),
         filename: 'fables.js',
